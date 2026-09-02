@@ -1,8 +1,6 @@
 # CRC Spatial Atlas
 
-Analysis code accompanying **"Tissue position resolves colorectal cancer plasticity states to three compartments."**
-
-This repository contains the analysis scripts only. Data are not hosted here — see **Data availability** below.
+Custom analysis code for "Tissue position resolves colorectal cancer plasticity states to three compartments" (Masood Lab, Indiana University School of Medicine).
 
 ## Repository structure
 
@@ -18,16 +16,15 @@ This repository contains the analysis scripts only. Data are not hosted here —
 
 ## Data availability
 
-Data used by these scripts are deposited externally, not in this repository:
+Each numbered folder is self-contained: script(s) + a `data/` subfolder with the inputs needed to run it, and writes its outputs to a `results/` subfolder 
+
+Data that are deposited externally:
 
 - Spatial transcriptomic and COMET imaging data: Zenodo (https://zenodo.org/records/22070345?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjFlY2ZjMDc4LTUwMjUtNGNlMi05MDFlLTMwNjhmY2EzNzBmZiIsImRhdGEiOnt9LCJyYW5kb20iOiI0ZGRlYWI2MWNmYzJjNmU4NzFlMzdhNTI5YjdlMWFjZSJ9.wmrcZXu8IKzf_So7ixvnEXHtJ8_fHE-6eV3otRTWb0GnX1XiawaRytXHKTuuCfvA_kYdD734NSxowq2svyTSHA)
 - Raw sequencing data: GEO (accession to be added on publication)
 - Mouse scRNA-seq data: GEO accession GSE290028
-- TCGA-COADREAD expression/survival data: downloaded automatically at runtime via `UCSCXenaTools` (see `07_survival_cox_analysis/survival_cox_analysis.R`)
-- GSE17536: publicly available via GEO; loaded as a Bioconductor `ExpressionSet`
 - Bulk Caris Life Sciences data: available from the corresponding author upon reasonable request under a data-use agreement
 
-Each script's header comment lists its expected input files and where to place them locally (typically a `data/` subfolder, which is intentionally excluded from this repository — see `.gitignore`).
 
 ## 1. System requirements
 
@@ -47,7 +44,7 @@ Each script's header comment lists its expected input files and where to place t
 ## 2. Installation guide
 
 ```bash
-git clone [REPO_URL] CRC_Spatial_Atlas
+git clone https://github.com/MasoodLabCRC/CRC_Spatial_Atlas CRC_Spatial_Atlas
 cd CRC_Spatial_Atlas
 conda env create -f environment.yml
 conda activate crc-spatial-atlas
@@ -57,7 +54,7 @@ conda activate crc-spatial-atlas
 
 ## 3. Demo
 
-Each folder's `data/` subfolder contains real (non-simulated) input data — subsets of the study's spatial transcriptomic and single-cell data sufficient to run that component's analysis end-to-end without needing the full 24-section, 264,255-spot atlas.
+Each folder's `data/` subfolder contains real (non-simulated) input data, subsets of the study's spatial transcriptomic data sufficient to run that component's analysis end-to-end.
 
 **To run any component**, e.g. folder 01:
 ```bash
@@ -67,6 +64,8 @@ Rscript core_to_edge_region_gradient.R
 
 **Expected output:** each script prints progress/summary statistics to the console and writes figures (PDF/PNG) and result tables (CSV) to a `results/` subfolder. See each folder's script header comment for its specific outputs.
 
+
+**Expected runtime:** ~60 minutes on a normal desktop computer
 
 ## 4. Instructions for use
 
