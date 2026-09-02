@@ -1,0 +1,16 @@
+# Data (see README — deposited on Zenodo/GEO, not tracked here)
+data/
+results/
+*.rds
+*.csv
+*.tsv
+
+# Exceptions: keep small, non-sensitive reference files if ever needed
+# !path/to/small_reference_file.csv
+
+# OS / editor junk
+.DS_Store
+__MACOSX/
+*.Rhistory
+.Rproj.user/
+*.log
