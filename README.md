@@ -8,7 +8,7 @@ Custom analysis code for "Tissue position resolves colorectal cancer plasticity 
 |---|---|---|
 | `01_core_to_edge_region_gradient/` | `core_to_edge_region_gradient.R` | Core-to-edge module gradient analysis (Fig. 2b, 2d) |
 | `02_signature_module_coactivity_tests/` | `module_competition_test.R` | Signature x module co-activity / module-competition test (Fig. 3c–e) |
-| `03_cross_tumor_reproducibility/` | `cross_tumor_reproducibility.py` | Cross-tumor reproducibility of module region profiles (Fig. 2e, Supp. Table 9) |
+| `03_cross_tumor_reproducibility/` | `cross_tumor_reproducibility.py` | Cross-tumor reproducibility of module region profiles (Fig. 2e) |
 | `04_signature_clustering_upgma/` | `signature_clustering_upgma.R` | UPGMA clustering of plasticity signatures (Fig. 3f) |
 | `05_comet_visium_alignment/` | `01_comet_visium_alignment.R`, `02_comet_visium_scatter.R` | COMET–Visium ecotype cross-platform validation (Fig. 1e, Ext. Data Fig. 1e) |
 | `06_spatial_context_map/` | `spatial_context_map.py` | Spatial context / ecotype adjacency map (Fig. 1f) |
