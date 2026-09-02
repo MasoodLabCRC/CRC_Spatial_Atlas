@@ -7,12 +7,12 @@ Custom analysis code for "Tissue position resolves colorectal cancer plasticity 
 | Folder | Script | Purpose |
 |---|---|---|
 | `01_core_to_edge_region_gradient/` | `core_to_edge_region_gradient.R` | Core-to-edge module gradient analysis (Fig. 2b, 2d) |
-| `02_signature_module_coactivity_tests/` | `module_competition_test.R` | Signature x module co-activity / module-competition test (Fig. 3c–e, Ext. Data Fig. 3) |
+| `02_signature_module_coactivity_tests/` | `module_competition_test.R` | Signature x module co-activity / module-competition test (Fig. 3c–e) |
 | `03_cross_tumor_reproducibility/` | `cross_tumor_reproducibility.py` | Cross-tumor reproducibility of module region profiles (Fig. 2e, Supp. Table 9) |
 | `04_signature_clustering_upgma/` | `signature_clustering_upgma.R` | UPGMA clustering of plasticity signatures (Fig. 3f) |
 | `05_comet_visium_alignment/` | `01_comet_visium_alignment.R`, `02_comet_visium_scatter.R` | COMET–Visium ecotype cross-platform validation (Fig. 1e, Ext. Data Fig. 1e) |
 | `06_spatial_context_map/` | `spatial_context_map.py` | Spatial context / ecotype adjacency map (Fig. 1f) |
-| `07_survival_cox_analysis/` | `survival_cox_analysis.R` | Prognostic association of M2 activity across survival cohorts (Fig. 6b–d) |
+| `07_survival_cox_analysis/` | `survival_cox_analysis.R` | Prognostic association of M2 activity across survival cohorts (Fig. 6a–d) |
 
 ## Data availability
 
@@ -44,7 +44,7 @@ Data that are deposited externally:
 ## 2. Installation guide
 
 ```bash
-git clone https://github.com/MasoodLabCRC/CRC_Spatial_Atlas CRC_Spatial_Atlas
+git clone https://github.com/MasoodLabCRC/CRC_Spatial_Atlas CRC_Spatial_Atlas CRC_Spatial_Atlas
 cd CRC_Spatial_Atlas
 conda env create -f environment.yml
 conda activate crc-spatial-atlas
